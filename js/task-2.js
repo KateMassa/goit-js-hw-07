@@ -50,6 +50,13 @@ function createGallery(imagesArray) {
 function buildGallery(imagesArray) {
   const galleryItems = createGallery(imagesArray);
   galleryList.append(...galleryItems);
+
+  // Loop through each item in the galleryItems array to apply styles
+  galleryItems.forEach((item) => {
+    item.style.display = "flex";
+    item.style.flexDirection = "column";
+    item.style.justifyContent = "center";
+  });
 }
 
 buildGallery(images);
